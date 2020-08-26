@@ -8,10 +8,9 @@
      "rootDir": "./src",                      
     "strict": true,                           
          
-     "strictPropertyInitialization": false,  
-   
-    
-     "baseUrl": "./src",                      
+     "strictPropertyInitialization": false,    
+     "baseUrl": "./src",
+     "allowJs": true,                     
      "paths": {
        "@modules/*": ["modules/*"],
        "@config/*": ["config/*"],
