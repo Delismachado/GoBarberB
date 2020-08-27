@@ -9,6 +9,9 @@ import EtherealMailProvider from './MailProvider/implementations/EtherealMailPro
 import IMailTemplateProvider from './MailTemplateProvider/models/IMailTemplateProvider';
 import HadlebarsMailTemplateProvider from './MailTemplateProvider/implementations/HandlebarsMailTemplateProvider';
 
+import './CacheProvider';
+
+
 
 
 
@@ -26,5 +29,7 @@ container.registerInstance<IMailProvider>(
     'MailProvider',
     container.resolve(EtherealMailProvider),
 );
+
+
 
 
