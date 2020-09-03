@@ -19,7 +19,7 @@ interface IRequest {
 @injectable()
 class UpdateProfile {
     constructor(
-        @inject('UserRepository')
+        @inject('UsersRepository')
         private usersRepository: IUsersRepository,
 
         @inject('HashProvider')
