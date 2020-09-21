@@ -4,6 +4,7 @@ import IUsersRepository from '@modules/users/repositories/IUsersRepository';
 import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
 
 import User from '@modules/users/infra/typeorm/entities/User';
+import { classToClass } from 'class-transformer';
 
 
 
@@ -32,7 +33,7 @@ class ListProvidersService {
         });
 
         
-        await this.cacheProvider.save(`providers-list:${user_id}`, users);
+        await this.cacheProvider.save(`providers-list:${user_id}`, classToClass(users) );
       }
 
       
