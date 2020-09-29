@@ -15,10 +15,10 @@ interface IRequest {
 @injectable()
 class ListProvidersService {
     constructor(
-        @inject('UserRepository')
+        @inject('UsersRepository')
         private usersRepository: IUsersRepository,
 
-        @inject('CachePrivier')
+        @inject('CacheProvider')
       private cacheProvider: ICacheProvider,        
     ){}
 
