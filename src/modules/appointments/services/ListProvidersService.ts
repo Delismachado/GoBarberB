@@ -38,7 +38,7 @@ class ListProvidersService {
 
       
       return users;
-      console.log(users)
+      
         
     }
 }
