@@ -43,6 +43,6 @@ app.use((err: Error, request: Request, response: Response, next: NextFunction) =
 } )
 
  
- app.listen(33334, () => {
+ app.listen(process.env.APP_API_PORT, () => {
      console.log('go!')
  });
