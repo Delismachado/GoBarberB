@@ -14,6 +14,21 @@ Styled Components, Components, Autenticação de Rotas, API Context, Props, Cone
 <li>Mobile com ReactNative</li>https://github.com/Delismachado/GoBarberMobile 🌱 GoBarberMobile.
 </ol>
 
+## Exemplos de chamadas para a API:
+
+Criação de usuário:
+
+```sh
+curl --request POST \
+  --url https://gobarber-api.derlimachado.xyz/users \
+  --header 'content-type: application/json' \
+  --data '{
+	
+	"name": "Derli 2 Machado",
+	"email": "derli2@gmail.com",
+	"password": "123456"
+}'
+```
 
 ## GoBarberWeb
 ### Pagina de cadastro, login, agendamento e recuperação de senha:
