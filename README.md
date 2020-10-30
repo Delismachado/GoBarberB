@@ -1,6 +1,4 @@
-# GoBarberBackend
-
-## GoBarberWeb
+# GoBarber-api
 ### Aplicação desenvolvida durante o curso GoStack da Rocketseat
 
 <p> Aplicação usando os princípios de SOLID e TDD!!
@@ -16,6 +14,8 @@ Styled Components, Components, Autenticação de Rotas, API Context, Props, Cone
 <li>Mobile com ReactNative</li>https://github.com/Delismachado/GoBarberMobile 🌱 GoBarberMobile.
 </ol>
 
+
+## GoBarberWeb
 ### Pagina de cadastro, login, agendamento e recuperação de senha:
 
 ![GoBarberWeb](https://github.com/Delismachado/GoBarberWeb/blob/master/src/Gobarber.gif)
