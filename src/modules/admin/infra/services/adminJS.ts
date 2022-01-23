@@ -12,10 +12,10 @@ const adminJS = async function () {
     if (!getConnectionManager().has('default')) {
         const connectionOptions = await getConnectionOptions();
         connection = await createConnection(connectionOptions);
-        connection.runMigrations();
     } else {
         connection = getConnection();
     }
+    connection.runMigrations();
 
     await User.useConnection(connection);
 
