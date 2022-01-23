@@ -1,8 +1,8 @@
-import { ObjectID, Entity, Column, CreateDateColumn, UpdateDateColumn, ObjectIdColumn } from 'typeorm';
+import { ObjectID, Entity, Column, CreateDateColumn, UpdateDateColumn, ObjectIdColumn, BaseEntity } from 'typeorm';
 
 
 @Entity('notifications')
-class Notification {
+class Notification extends BaseEntity {
   @ObjectIdColumn()
   id: ObjectID;
 
@@ -12,7 +12,7 @@ class Notification {
   @Column('uuid')
   recipient_id: string;
 
-  @Column({ default: false})
+  @Column({ default: false })
   read: boolean;
 
   @CreateDateColumn()
