@@ -27,4 +27,4 @@ async function connect(): Promise<void> {
     }
 }
 
-connect()
+export default connect;

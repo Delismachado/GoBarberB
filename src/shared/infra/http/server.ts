@@ -13,12 +13,13 @@ import uploadConfig from '@config/upload';
 import AppError from '@shared/errors/AppError';
 import rateLimiter from './middlewares/rateLimiter';
 
-import '@shared/infra/typeorm';
+import connect from '@shared/infra/typeorm';
 import '@shared/container';
 
 
 
 (async () => {
+    await connect();
     const app = express();
     app.use(rateLimiter);
     app.use(cors());
