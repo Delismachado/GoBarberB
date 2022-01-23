@@ -4,6 +4,11 @@ if (process.env.DATABASE_URL) {
         "name": "default",
         "type": "postgres",
         "url": process.env.DATABASE_URL,
+        "synchronize": false,
+        "logging": false,
+        "extra": {
+            "ssl": true,
+        },
         "entities": [
             "./src/modules/**/infra/typeorm/entities/*.ts"
         ],
