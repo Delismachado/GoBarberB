@@ -22,8 +22,7 @@ const adminJS = async function () {
     return new AdminJS({
         rootPath: '/admin',
         resources: [
-            { resource: User, options: {} },
-            { resource: Appointments, options: {} }
+            // { resource: User, options: {} }, { resource: Appointments, options: {} }
         ],
     })
 }
