@@ -1,25 +1,25 @@
 
-import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn } from  'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, BaseEntity } from 'typeorm';
 
 import { Exclude, Expose } from 'class-transformer';
 
 @Entity('users')
-class User {
+class User extends BaseEntity {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
     @Column()
-    name : string;
+    name: string;
 
     @Column()
-    email : string;
+    email: string;
 
     @Column()
     @Exclude()
-    password : string;
+    password: string;
 
     @Column()
-    avatar : string;
+    avatar: string;
 
     @CreateDateColumn()
     created_at: Date;
@@ -27,9 +27,9 @@ class User {
     @UpdateDateColumn()
     updated_at: Date;
 
-    @Expose({name: 'avatar_url'})
+    @Expose({ name: 'avatar_url' })
     getAvatarUrl(): string | null {
-        return this.avatar ? `${process.env.APP_API_URL}/files/${this.avatar}`: null;
+        return this.avatar ? `${process.env.APP_API_URL}/files/${this.avatar}` : null;
     }
 
 }

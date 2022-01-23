@@ -1,0 +1,22 @@
+version: '2'
+services:
+  redis:
+    image: bitnami/redis:latest
+    environment:
+      - REDIS_PASSWORD=bbbbbbbc5b820f1cd1ecfb89f367afe0c2253
+    ports:
+      - 36379:6379
+  mongo:
+    image: bitnami/mongodb:latest
+    environment:
+      - MONGODB_DATABASE=gobarber
+    ports:
+      - 27017:27017
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=docker
+    volumes:
+      - /private/var/lib/postgresql:/var/lib/postgresql
+    ports:
+      - 54321:5432
