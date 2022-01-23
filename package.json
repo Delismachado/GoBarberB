@@ -38,7 +38,8 @@
         "server": "^1.0.29",
         "tsyringe": "^4.3.0",
         "typeorm": "^0.2.25",
-        "uuidv4": "^6.1.0"
+        "uuidv4": "^6.1.0",
+        "babel-plugin-module-resolver": "^4.0.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.12.1",
@@ -57,7 +58,6 @@
         "@types/jsonwebtoken": "^8.5.0",
         "@types/multer": "^1.4.3",
         "@types/nodemailer": "^6.4.0",
-        "babel-plugin-module-resolver": "^4.0.0",
         "babel-plugin-transform-typescript-metadata": "^0.3.1",
         "jest": "^26.1.0",
         "ts-jest": "^26.1.2",
