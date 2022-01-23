@@ -8,23 +8,11 @@ import { createConnection, getConnection, getConnectionManager, getConnectionOpt
 AdminJS.registerAdapter({ Database, Resource });
 
 const adminJS = async function () {
-    const connectionOptions = {
-        "name": "asdfsfasdf",
-        "type": "postgres",
-        "host": "localhost",
-        "port": 54321,
-        "username": "postgres",
-        "password": "docker",
-        "database": "gostack_gobarber",
-        "entities": [
-            User
-        ],
-    };
-
     let connection = null;
     if (!getConnectionManager().has('default')) {
         const connectionOptions = await getConnectionOptions();
         connection = await createConnection(connectionOptions);
+        connection.runMigrations();
     } else {
         connection = getConnection();
     }
@@ -32,7 +20,6 @@ const adminJS = async function () {
     await User.useConnection(connection);
 
     return new AdminJS({
-        // databases: [connection],
         rootPath: '/admin',
         resources: [
             { resource: User, options: {} },
