@@ -45,7 +45,7 @@ import '@shared/container';
         });
     })
     app.use(await routes());
-    app.listen(process.env.APP_API_PORT, () => {
+    app.listen(process.env.PORT, () => {
         console.log('go!')
     });
 })();
