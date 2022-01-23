@@ -9,9 +9,6 @@ async function connect(): Promise<void> {
             synchronize: false,
             logging: false,
             ssl: { rejectUnauthorized: false },
-            extra: {
-                ssl: true,
-            },
             entities: [
                 "./dist/modules/**/infra/typeorm/entities/*.js"
             ],
